@@ -3,7 +3,6 @@ import argparse
 import os
 from tqdm import tqdm
 
-########################################################################
 class transfer_data(object):
     """"""
     #----------------------------------------------------------------------
@@ -59,7 +58,8 @@ if __name__ == "__main__":
     ap.add_argument('-p','--origin',help='pathdir file origin',required=True)
     ap.add_argument('-pp','--dst',help='pathdir file transfer',required=True)
     ap.add_argument('-host','--hostname',help='hostname',required=False)
-    ap.add_argument('-file','--filename',help='filename',required=True,default='all')
+    ap.add_argument('-file','--filename',help='filename',required=True,default='all') #if folder, use 'all'
+
 
     arg = ap.parse_args()
     filename = arg.filename
